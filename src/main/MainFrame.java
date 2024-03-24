@@ -5,8 +5,8 @@
 package main;
 
 /**
- * @ Jareth Baur;
- * @ November 21, 2023;
+ * @author Jareth Baur;
+ * @since November 21, 2023;
  */
 public class MainFrame extends javax.swing.JFrame {
 
@@ -37,6 +37,7 @@ public class MainFrame extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Speed Converter");
 
         jComboBox1.setBackground(new java.awt.Color(153, 153, 153));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "meters per second", "meters per hour", "kilometers per hour", "inches per second", "inches per hour", "feet per second", "feet per hour", "miles per second", "miles per hour", "knots" }));
@@ -134,6 +135,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     @SuppressWarnings("unused")
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
@@ -236,16 +238,6 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     public static void main(String args[]) {
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
         java.awt.EventQueue.invokeLater(() -> {
             new MainFrame().setVisible(true);
         });
